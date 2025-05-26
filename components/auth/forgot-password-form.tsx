@@ -25,7 +25,7 @@ export function ForgotPasswordForm() {
     },
   })
 
-  async function onSubmit(values: ForgotPasswordInput) {
+  async function handleForgotPassword(values: ForgotPasswordInput) {
     setIsLoading(true)
     setError("")
 
@@ -84,7 +84,7 @@ export function ForgotPasswordForm() {
         )}
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(handleForgotPassword)} className="space-y-4">
             <FormField
               control={form.control}
               name="email"
