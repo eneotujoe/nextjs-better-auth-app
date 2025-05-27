@@ -2,7 +2,7 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { db } from "@/lib/db/drizzle";
 import { nextCookies } from "better-auth/next-js";
-import { schema } from "./db/schema";
+import { schema } from "../db/schema";
 
 
 export const auth = betterAuth({
@@ -15,10 +15,10 @@ export const auth = betterAuth({
     emailAndPassword: {  
         enabled: true,
         // autoSignIn: false,
-        sendResetPassword: async ({ user, url }) => {
-            // In production, replace with actual email service
-            console.log(`Password reset for ${user.email}: ${url}`)
-        },
+        // sendResetPassword: async ({ user, url }) => {
+        //     // In production, replace with actual email service
+        //     // console.log(`Password reset for ${user.email}: ${url}`)
+        // },
     },
 
     socialProviders: {

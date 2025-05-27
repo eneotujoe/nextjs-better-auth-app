@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next Betterr Auth App",
+  title: "Next Better Auth App",
   description: "A Next.js application with Betterr Auth integration",
 };
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { useSession, signOut } from "@/lib/auth-client"
+import { useSession, signOut } from "@/lib/auth/auth-client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"

@@ -11,7 +11,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Loader2, ArrowLeft, CheckCircle } from "lucide-react"
 import Link from "next/link"
-import { forgetPassword } from "@/lib/auth-client"
+import { forgetPassword } from "@/lib/auth/auth-client"
 
 export function ForgotPasswordForm() {
   const [isLoading, setIsLoading] = useState(false)

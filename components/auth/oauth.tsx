@@ -2,7 +2,7 @@ import { useActionState, useEffect, useState } from 'react';
 
 import { Button } from '../ui/button';
 import { GoogleIcon } from '../icons';
-import { googleSignIn } from '@/lib/auth-client';
+import { googleSignIn } from '@/lib/auth/auth-client';
 
 export function Oauth() {
 

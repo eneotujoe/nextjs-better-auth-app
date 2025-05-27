@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Loader2, Eye, EyeOff } from "lucide-react"
-import { resetPassword } from "@/lib/auth-client"
+import { resetPassword } from "@/lib/auth/auth-client"
 
 export function ResetPasswordForm() {
   const [isLoading, setIsLoading] = useState(false)
