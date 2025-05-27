@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Next Better Auth App",
-  description: "A Next.js application with Betterr Auth integration",
+  description: "A Next.js application with Better Auth integration",
 };
 
 export default function RootLayout({

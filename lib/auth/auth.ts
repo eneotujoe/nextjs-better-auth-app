@@ -6,7 +6,7 @@ import { schema } from "../db/schema";
 
 
 export const auth = betterAuth({
-    baseURL: process.env.BASE_URL,
+    // baseURL: process.env.BASE_URL,
     database: drizzleAdapter(db, {
         provider: "pg",
         schema: schema
