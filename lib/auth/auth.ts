@@ -15,10 +15,10 @@ export const auth = betterAuth({
     emailAndPassword: {  
         enabled: true,
         // autoSignIn: false,
-        // sendResetPassword: async ({ user, url }) => {
-        //     // In production, replace with actual email service
-        //     // console.log(`Password reset for ${user.email}: ${url}`)
-        // },
+        sendResetPassword: async ({ user, url }) => {
+            // In production, replace with actual email service
+            // console.log(`Password reset for ${user.email}: ${url}`)
+        },
     },
 
     socialProviders: {

@@ -39,12 +39,16 @@ export function SignUpForm() {
         email: values.email,
         password: values.password,
         name: values.name,
+        callbackURL: "/",
+        fetchOptions: {
+          onError(context) {
+            setError(context.error.message)
+          },
+          onSuccess() {
+            router.push("/dashboard");
+          },
+        },
       })
-
-      if (error) {
-        setError(error.message || "An error occurred during sign up")
-        return
-      }
 
       if (data) {
         setUserEmail(values.email)
@@ -54,7 +58,6 @@ export function SignUpForm() {
       setError("An unexpected error occurred")
     } finally {
       setIsLoading(false)
-      router.push("/dashboard")
     }
   }
 

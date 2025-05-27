@@ -35,6 +35,12 @@ export function LoginForm() {
       const { data, error } = await signIn.email({
         email: values.email,
         password: values.password,
+        fetchOptions: {
+        onError(ctx) {
+            //handle error
+          alert(ctx.error.message);
+        }
+    }
       })
 
       if (error) {
@@ -74,7 +80,7 @@ export function LoginForm() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="john@example.com" disabled={isLoading} {...field} />
+                    <Input type="email" placeholder="john@email.com" disabled={isLoading} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
