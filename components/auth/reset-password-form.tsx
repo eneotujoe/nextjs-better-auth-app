@@ -19,7 +19,7 @@ export function ResetPasswordForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const router = useRouter()
-  // const searchParams = useSearchParams()
+  const searchParams = useSearchParams()
 
   const form = useForm<ResetPasswordInput>({
     resolver: zodResolver(resetPasswordSchema),
@@ -33,9 +33,7 @@ export function ResetPasswordForm() {
     setIsLoading(true)
     setError("")
 
-    const token = new URLSearchParams(window.location.search).get("token");
-    // const token = searchParams.get("token")
-
+    const token = searchParams.get("token")
 
     if (!token) {
       setError("Invalid reset token")
