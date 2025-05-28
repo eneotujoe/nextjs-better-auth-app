@@ -23,10 +23,10 @@ export default function LoginPage() {
   return (
     <div className="flex h-dvh w-screen items-center justify-center bg-background">
       <div className="w-full max-w-md overflow-hidden rounded-2xl flex flex-col">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col m-3">
           <Card>
             <CardContent>
-              <Tabs defaultValue="login" className="w-[400px]">
+              <Tabs defaultValue="login">
                 <CardHeader className="text-center">
                   <TabsList className="grid w-full grid-cols-2">
                       <TabsTrigger value="login" className='font-bold'>Login</TabsTrigger>
